@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 2rem;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  border: 1px solid blue;
+  position: relative;
+}
+
+.tansan-right,
+.tansan-left-bottom,
+.tansan-right-bottom,
+.tansan-left {
+  width: 20px;
+  height: 20px;
+  border: 1px solid gray;
+  background-color: white;
+  border-radius: 100%;
+  position: absolute;
+  right: -11px;
+  top: -11px;
+  z-index: 2;
+}
+
+.tansan-right-bottom {
+  top: initial;
+  bottom: -11px;
+}
+
+.tansan-left-bottom {
+  left: -11px;
+  bottom: -11px;
+  top: initial;
+}
+
+.tansan-left {
+  right: initial;
+  left: -11px;
+}
+
+.black {
+  background-color: black;
+}
+
+.container:first-child .box:first-child,
+.container:nth-child(7) .box:first-child {
+  border: none;
+  border-right: 1px solid blue;
+}
+.container:first-child .box:last-child,
+.container:nth-child(7) .box:last-child {
+  border: none;
+  border-left: 1px solid blue;
+}
